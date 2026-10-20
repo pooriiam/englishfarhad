@@ -97,49 +97,91 @@
   </main>
 
   <!-- قسمت متحرک وسط صفحه -->
-    <!-- Journey (scroll section) -->
+  <!-- Journey Section -->
   <section id="journey" class="journey">
     <div class="journey-head">
-      <h2>مسیر یادگیری (اسکرول کن)</h2>
-      <p>هر چی پایین‌تر میای، مرحله‌ها عوض میشن — مثل بازی، ولی نتیجه‌اش واقعی!</p>
+      <h2>مسیر یادگیری و تحول مکالمه</h2>
+      <p>هر چقدر پایین‌تر اسکرول کنی، تغییر سطح و روش یادگیری رو زنده می‌بینی!</p>
     </div>
 
     <div class="journey-stage">
       <div class="walker" id="walker">
-        <div class="walker-badge" id="walkerBadge">مرحله ۱ از ۳</div>
-        <div class="walker-face" id="walkerFace">🗣️</div>
+        <div class="walker-badge" id="walkerBadge">مرحله ۱: شروع ماجرا</div>
+        
+        <!-- کارت شبیه‌ساز محتوای زنده وسط صفحه -->
+        <div class="interactive-display" id="interactiveDisplay">
+          
+          <!-- محتوای مرحله ۱: شبیه‌ساز چت و صحبت واقعی -->
+          <div class="stage-screen active" data-screen="0">
+            <div class="screen-header">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="screen-title">تمرین زنده مکالمه 🎧</span>
+            </div>
+            <div class="chat-box">
+              <div class="chat-bubble student">استاد من گرامر بلدم، ولی وقت حرف زدن قفل می‌کنم! 🤦‍♂️</div>
+              <div class="chat-bubble farhad">دقیقاً اینجاست که فرمول طلایی سکوت‌شکنی میاد کمکت؛ فقط گوش بده و تکرار کن... 🎙️</div>
+            </div>
+            <div class="action-tag purple">تمرکز: شکستن لکنت و خجالت اولیه</div>
+          </div>
+
+          <!-- محتوای مرحله ۲: مقایسه انگلیسی کتابی vs واقعی -->
+          <div class="stage-screen" data-screen="1">
+            <div class="screen-header">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="screen-title">انگلیسی کتابی vs انگلیسی نیتیو 🧠</span>
+            </div>
+            <div class="vs-container">
+              <div class="vs-item bad">
+                <span class="vs-label">❌ کتابی و خشک:</span>
+                <code>I am very tired, I will sleep.</code>
+              </div>
+              <div class="vs-item good">
+                <span class="vs-label">✅ نیتیو و امروزی:</span>
+                <code>I'm totally beat, gonna hit the sack! 😴</code>
+              </div>
+            </div>
+            <div class="action-tag cyan">تمرکز: استفاده از اصطلاحات روزمره و اسلنگ‌ها</div>
+          </div>
+
+          <!-- محتوای مرحله ۳: جعبه تسلط و آماده به کار -->
+          <div class="stage-screen" data-screen="2">
+            <div class="screen-header">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="screen-title">رسیدن به روانی کلام 🚀</span>
+            </div>
+            <div class="result-box">
+              <div class="metric">
+                <span class="metric-num">۱۰۰٪</span>
+                <span class="metric-desc">تثبیت لهجه و اعتماد به نفس در جمع</span>
+              </div>
+              <p class="final-desc">حالا بدون اینکه تو ذهنت از فارسی به انگلیسی ترجمه کنی، اتوماتیک حرف می‌زنی!</p>
+            </div>
+            <div class="action-tag orange">تمرکز: تسلط بدون فکر کردن به گرامر</div>
+          </div>
+
+        </div>
       </div>
 
+      <!-- کارت‌های توضیحات پایین -->
       <div class="cards">
-        <!-- مرحله 1 -->
         <article class="step active" data-step="0">
-          <div class="step-icon-wrap" style="background: rgba(124, 58, 237, 0.12); color: #7c3aed;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-          </div>
-          <h3>مرحله ۱: شکستن ترس مکالمه</h3>
-          <p>تمرین‌های کوتاه، مکالمه‌های هدفمند و تکنیک‌هایی برای اینکه لکنت و خجالت جمعش کنن برن.</p>
+          <h3>مرحله ۱: شکستن دیوار خجالت و سکوت</h3>
+          <p>با تمرین‌های گفتاری ۲ دقیقه‌ای در روز، ترست از اشتباه کردن می‌ریزه و زبونت گرم میشه.</p>
         </article>
 
-        <!-- مرحله 2 -->
         <article class="step" data-step="1">
-          <div class="step-icon-wrap" style="background: rgba(6, 182, 212, 0.12); color: #06b6d4;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
-          </div>
-          <h3>مرحله ۲: اصطلاحات واقعی و زبان روزمره</h3>
-          <p>نه اون انگلیسیِ کتابی که کسی استفاده نمی‌کنه. اصطلاحات و جمله‌هایی که واقعاً به کارت میاد.</p>
+          <h3>مرحله ۲: تزریق زبان زنده و کوچه بازاری</h3>
+          <p>خداحافظی با متدهای عهد بوق! یاد می‌گیری چطور مثل یک بومی (Native) در موقعیت‌های واقعی شوخی کنی و نظر بدی.</p>
         </article>
 
-        <!-- مرحله 3 -->
         <article class="step" data-step="2">
-          <div class="step-icon-wrap" style="background: rgba(249, 115, 22, 0.12); color: #f97316;">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-          </div>
-          <h3>مرحله ۳: اعتماد به نفس و تسلط</h3>
-          <p>مدل ذهنی درست + تکرار هوشمند = مکالمه روان. اینجا دیگه تو کنترل بازی‌ای!</p>
+          <h3>مرحله ۳: روانی کامل در مصاحبه و سفر</h3>
+          <p>بدون مکث، بدون تپق و بدون نیاز به ترجمه کلمه به کلمه در مغز. انگلیسی میشه بخش طبیعی زندگی روزمره‌ات.</p>
         </article>
       </div>
     </div>
   </section>
+
 
   
   <!-- Blog -->
