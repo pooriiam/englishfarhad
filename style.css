@@ -735,20 +735,6 @@ body::after {
 }
 
 /*استایل زنده عکس*/
-/* انیمیشن شناور نرم و جذاب برای عکس استاد */
-@keyframes floatPhoto {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-8px) rotate(0.5deg); /* یک‌کم میره بالا و خیلی نامحسوس کج میشه */
-  }
-}
-
-.hero-card .photo img {
-  animation: floatPhoto 6s ease-in-out infinite;
-  transition: transform 0.4s ease;
-}
 
 /* وقتی ماوس رفت روش، یکم زوم بشه و شاداب‌تر بشه */
 .hero-card .photo img:hover {
