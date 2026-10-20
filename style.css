@@ -612,3 +612,49 @@ body{
 .metric-num { font-size: 2.2rem; font-weight: 900; color: #10b981; display: block; }
 .metric-desc { font-weight: 800; font-size: 0.95rem; }
 .final-desc { font-size: 0.9rem; color: var(--muted); margin-top: 6px; }
+/* هاله‌های نوری زنده در پس‌زمینه */
+body::before, body::after {
+  content: "";
+  position: fixed;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(90px);
+  z-index: -1;
+  opacity: 0.35;
+  pointer-events: none;
+  animation: floatOrb 12s infinite alternate ease-in-out;
+}
+
+body::before {
+  background: radial-gradient(circle, var(--p1), transparent 70%);
+  top: -100px;
+  right: -80px;
+}
+
+body::after {
+  background: radial-gradient(circle, var(--p2), var(--p3));
+  bottom: 50px;
+  left: -120px;
+  animation-duration: 15s;
+}
+
+@keyframes floatOrb {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, 60px) scale(1.15); }
+  100% { transform: translate(-30px, 30px) scale(0.95); }
+}
+/* افکت زنده و نرم روی کادر عکس فرهاد */
+.hero-image {
+  animation: gentleFloat 6s ease-in-out infinite;
+  transition: transform 0.4s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.03) translateY(-6px);
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
