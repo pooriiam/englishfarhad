@@ -371,3 +371,22 @@ body{
   .hero-wrap{ grid-template-columns: 1fr; }
   .navbar{ inset: 12px 12px auto 12px; }
 }
+/* استایل اختصاصی و رنگی برای دکمه‌های فوتر */
+.footer-actions .btn-email {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff;
+  border: none;
+}
+.footer-actions .btn-whatsapp {
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #fff;
+  border: none;
+}
+.footer-actions .btn-instagram {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  color: #fff;
+  border: none;
+}
+.footer-actions .btn:hover {
+  filter: brightness(1.08);
+}
