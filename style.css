@@ -186,19 +186,60 @@ body{
   flex-direction: column;
 }
 
-.photo{
+/* =========================================
+   قاب عکس مدرن، نئونی و سه‌بعدی (سبک Awwwards)
+   ========================================= */
+.photo {
   position: relative;
   aspect-ratio: 16/10;
-  background:
-    radial-gradient(1200px 500px at 30% 20%, rgba(124,58,237,0.25), transparent 55%),
-    radial-gradient(900px 420px at 80% 30%, rgba(6,182,212,0.22), transparent 55%);
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(234, 88, 12, 0.15), rgba(245, 158, 11, 0.15));
+  padding: 4px; /* ضخامت قاب نوری */
+  box-shadow: 0 25px 50px -12px rgba(45, 24, 16, 0.25);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.5s ease;
 }
-.photo img{
-  width:100%;
-  height:100%;
+
+/* چرخش نور گرادینت دور قاب عکس */
+.photo::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  background: conic-gradient(from 0deg at 50% 50%, #ea580c 0deg, #f59e0b 120deg, #e11d48 240deg, #ea580c 360deg);
+  animation: rotateGlow 6s linear infinite;
+  z-index: 0;
+  opacity: 0.7;
+}
+
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* تنظیمات خود عکس داخل قاب نوری */
+.photo img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  display:block;
+  object-position: center top;
+  border-radius: 18px;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.4s ease;
+  filter: contrast(1.05) saturate(1.05);
 }
+
+/* افکت مگنتیک و جذاب هنگام هاور ماوس روی عکس */
+.photo:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 35px 70px -15px rgba(234, 88, 12, 0.35);
+}
+
+.photo:hover img {
+  transform: scale(1.04);
+}
+
 
 .bio{ padding: 18px 18px 20px; }
 .bio h2{ margin: 0 0 10px; font-size: 1.25rem; }
