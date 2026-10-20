@@ -421,3 +421,67 @@ body{
   transform: translateY(-3px);
   box-shadow: 0 16px 30px rgba(225, 48, 108, 0.5);
 }
+
+/*تنظیم اتوماتیک سایز سایت در گوشی ها*/
+
+/* =========================================
+   بهینه‌سازی حرفه‌ای و قوی برای موبایل و تبلت
+   ========================================= */
+@media (max-width: 920px) {
+  /* فیکس شدن هدر بالای صفحه که از کادر نزند بیرون */
+  .navbar {
+    inset: 10px 10px auto 10px !important;
+    padding: 0 14px !important;
+    height: 58px;
+  }
+  
+  .brand-text {
+    font-size: 0.95rem;
+  }
+
+  .nav a:not(.btn) {
+    display: none; /* مخفی کردن لینک‌های اضافی در موبایل برای خلوت شدن هدر */
+  }
+
+  /* تنظیم ستون‌های هرو زیر هم در موبایل */
+  .hero-wrap {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+    padding: 0 4px;
+  }
+
+  .hero {
+    padding: 100px 14px 30px !important;
+  }
+
+  /* کوچک کردن سایز عنوان اصلی در موبایل برای خوانایی عالی */
+  .hero-title {
+    font-size: 1.9rem !important;
+    line-height: 1.35;
+  }
+
+  /* فیکس شدن کامل عکس و جلوگیری از نصفه افتادن آن */
+  .photo {
+    aspect-ratio: 16 / 11 !important;
+    max-height: 280px;
+  }
+  
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top; /* تنظیم چهره در بالاترین و بهترین نقطه کادر */
+  }
+
+  /* مرتب شدن دکمه‌های فوتر و شبکه‌های اجتماعی به صورت ستونی یا شبکه مرتب */
+  .footer-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .btn-social {
+    width: 100%;
+    justify-content: center;
+  }
+}
