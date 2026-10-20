@@ -511,4 +511,104 @@ body{
 .step.active .walker-face {
   transform: scale(1.1);
 }
+/* استایل باکس هوشمند وسط صفحه مسیر یادگیری */
+.interactive-display {
+  width: min(540px, 90vw);
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+  padding: 16px 20px;
+  position: relative;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+}
 
+.stage-screen {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  gap: 12px;
+  animation: fadeInStage 0.4s ease forwards;
+}
+
+.stage-screen.active {
+  display: flex;
+}
+
+@keyframes fadeInStage {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.dot { width: 10px; height: 10px; border-radius: 50%; }
+.dot.red { background: #ef4444; }
+.dot.yellow { background: #f59e0b; }
+.dot.green { background: #10b981; }
+.screen-title { margin-right: auto; font-size: 0.85rem; font-weight: 800; color: var(--muted); }
+
+/* محتوای چت */
+.chat-box { display: flex; flex-direction: column; gap: 8px; }
+.chat-bubble {
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  max-width: 88%;
+}
+.chat-bubble.student {
+  background: #f1f5f9;
+  color: #334155;
+  align-self: flex-start;
+  border-bottom-right-radius: 4px;
+}
+.chat-bubble.farhad {
+  background: linear-gradient(135deg, #7c3aed, #6366f1);
+  color: #fff;
+  align-self: flex-end;
+  border-bottom-left-radius: 4px;
+}
+
+/* محتوای مقایسه‌ای کتابی vs نیتیو */
+.vs-container { display: flex; flex-direction: column; gap: 8px; }
+.vs-item {
+  padding: 8px 12px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+}
+.vs-item.bad { background: rgba(239, 68, 68, 0.08); border-right: 3px solid #ef4444; }
+.vs-item.good { background: rgba(16, 185, 129, 0.08); border-right: 3px solid #10b981; }
+.vs-label { font-weight: 800; font-size: 0.8rem; }
+.vs-item code { font-family: monospace; font-size: 0.95rem; font-weight: bold; }
+
+/* برچسب‌های فوکوس پایین */
+.action-tag {
+  align-self: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+.action-tag.purple { background: rgba(124, 58, 237, 0.12); color: #7c3aed; }
+.action-tag.cyan { background: rgba(6, 182, 212, 0.12); color: #0891b2; }
+.action-tag.orange { background: rgba(249, 115, 22, 0.12); color: #ea580c; }
+
+/* نتیجه نهایی */
+.result-box { text-align: center; }
+.metric-num { font-size: 2.2rem; font-weight: 900; color: #10b981; display: block; }
+.metric-desc { font-weight: 800; font-size: 0.95rem; }
+.final-desc { font-size: 0.9rem; color: var(--muted); margin-top: 6px; }
